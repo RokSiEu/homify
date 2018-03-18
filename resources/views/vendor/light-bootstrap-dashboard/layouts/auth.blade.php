@@ -14,8 +14,8 @@
 
   <!-- Styles -->
   @section('styles')
-  <link href="{{ mix('/css/light-bootstrap-dashboard.css') }}" rel="stylesheet">
-  <link href="{{ mix('/css/auth.css') }}" rel="stylesheet">
+  <link href="{{ env('APP_URL') }}{{ mix('/css/light-bootstrap-dashboard.css') }}" rel="stylesheet">
+  <link href="{{ env('APP_URL') }}{{ mix('/css/auth.css') }}" rel="stylesheet">
   @show
   @stack('head')
 </head>
@@ -25,9 +25,9 @@
 	</div>
 
 	@section('scripts')
-	<script src="{{ mix('/js/manifest.js') }}" charset="utf-8"></script>
-	<script src="{{ mix('/js/vendor.js') }}" charset="utf-8"></script>
-	<script src="{{ mix('/js/auth.js') }}" charset="utf-8"></script>
+	<script src="{{ env('APP_URL') }}{{ mix('/js/manifest.js') }}" charset="utf-8"></script>
+	<script src="{{ env('APP_URL') }}{{ mix('/js/vendor.js') }}" charset="utf-8"></script>
+	<script src="{{ env('APP_URL') }}{{ mix('/js/auth.js') }}" charset="utf-8"></script>
 	@show
 	@stack('body')
 </body>
